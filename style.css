@@ -1,60 +1,76 @@
 /* General Styles */
 body {
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #2c3e50, #4ca1af);
-    color: white;
-    text-align: center;
+    background: #fafafa;
+    color: #202022;
+    text-align: left;
     margin: 0;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
+    padding: 50px 20px;
 }
 
 /* To-Do Container */
 .todo-container {
-    background: rgba(0, 0, 0, 0.3);
-    padding: 20px;
-    border-radius: 10px;
-    width: 350px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    background: white;
+    padding: 40px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ebebeb;
 }
 
 /* Title */
 h1 {
-    font-size: 24px;
-    margin-bottom: 15px;
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #db4c3f;
+    font-weight: 600;
 }
 
 /* Input Field */
 .todo-input {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     gap: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 input {
-    padding: 10px;
-    width: 70%;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
+    padding: 8px 12px;
+    width: 80%;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #202022;
+    transition: all 0.2s ease;
+}
+
+input:focus {
+    outline: none;
+    border-color: #db4c3f;
+    box-shadow: 0 0 0 2px rgba(219, 76, 63, 0.1);
 }
 
 button {
-    padding: 10px 15px;
-    background: #f39c12;
-    color: black;
+    padding: 8px 16px;
+    background: #db4c3f;
+    color: white;
     border: none;
-    border-radius: 5px;
-    font-size: 16px;
+    border-radius: 4px;
+    font-size: 14px;
     cursor: pointer;
-    transition: background 0.3s ease;
+    transition: background 0.2s ease;
+    text-transform: none;
+    font-weight: 500;
+    letter-spacing: normal;
 }
 
 button:hover {
-    background: #e67e22;
+    background: #c53727;
 }
 
 /* Task List */
@@ -64,38 +80,118 @@ ul {
 }
 
 li {
-    background: rgba(255, 255, 255, 0.2);
-    padding: 10px;
-    margin: 5px 0;
-    border-radius: 5px;
+    background: white;
+    padding: 12px 16px;
+    margin: 8px 0;
+    border-radius: 4px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    cursor: pointer;
-    transition: background 0.3s;
+    transition: background 0.2s ease;
+    border: 1px solid #ebebeb;
+}
+li span {
+    flex-grow: 1;
+    margin-right: 10px;
 }
 
 li:hover {
-    background: rgba(255, 255, 255, 0.3);
+    background: #f9f9f9;
+}
+
+/* Delete Button */
+.delete-btn {
+    background: transparent;
+    color: #808080;
+    padding: 4px 8px;
+    font-size: 12px;
+    opacity: 0;
+    transition: all 0.2s ease;
+}
+
+li:hover .delete-btn {
+    opacity: 1;
+}
+
+.delete-btn:hover {
+    background: #f1f1f1;
+    color: #db4c3f;
 }
 
 /* Completed Task */
 .completed {
     text-decoration: line-through;
     opacity: 0.7;
+    background: white;
+    color: #808080;
+}
+/* ... existing styles ... */
+
+/* Icon Styles */
+.fa-check-circle {
+    color: #db4c3f;
+    margin-right: 8px;
 }
 
-/* Delete Button */
-.delete-btn {
-    background: red;
+.fa-plus {
+    margin-right: 4px;
+}
+
+/* Filters */
+.filters {
+    margin-bottom: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.filter-btn {
+    background: transparent;
+    color: #555;
+    padding: 6px 12px;
+    font-size: 13px;
+    border: 1px solid #ddd;
+}
+
+.filter-btn:hover {
+    background: #f1f1f1;
+    color: #202022;
+}
+
+.filter-btn.active {
+    background: #db4c3f;
     color: white;
-    border: none;
-    padding: 5px 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s ease;
+    border-color: #db4c3f;
 }
 
-.delete-btn:hover {
-    background: darkred;
+/* Footer */
+.todo-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #ebebeb;
+}
+
+#tasks-counter {
+    color: #808080;
+    font-size: 13px;
+}
+
+.clear-btn {
+    background: transparent;
+    color: #808080;
+    font-size: 13px;
+    padding: 6px 12px;
+}
+
+.clear-btn:hover {
+    color: #db4c3f;
+    background: #f1f1f1;
+}
+.task-checkbox {
+    margin-right: 10px;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    accent-color: #db4c3f;
 }
