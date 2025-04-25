@@ -15,28 +15,14 @@ Technologies Used
 - CSS3
 - JavaScript
 
-Installation
-
-1. Clone the Repository:
-
-   ```bash
-   git clone https://github.com/Arsenic0815W/TO-Do-list.git
-   ```
-
-2. Open the Project:
-
-   Navigate to the cloned directory and open the `index.html` file in your preferred web browser.
-
 Usage
 
-- Adding Tasks: Type in your task into the input field and click the "Add" button.
-- Deleting Tasks: Click the "Delete" button next to each task to remove it.
-- Marking as Complete: Click on a task to toggle its completed status.
-
-Customization
-
-You can customize the look and feel by editing the `style.css` file. The functionality can be extended or modified within the `script.js` file.
+Type your task in the input field.
+2. Click `+ Add` or press Enter to add it.
+3. Click the status buttons to filter your list.
+4. Mark tasks as completed by clicking them.
+5. Click Clear completed to remove finished items.
 
 License
 
-This project is open-source. Feel free to fork and improve it according to your requirements.
+This project is open-source. 
